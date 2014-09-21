@@ -11,9 +11,9 @@ LDFLAGS	= -melf_i386 -Tsrc/linker.ld
 
 default: all
 
-all: build/module.bin
+all: build/module
 
-build/module.bin: build $(OBJS)
+build/module: build $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $(OBJS)
 
 build:

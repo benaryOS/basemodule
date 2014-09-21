@@ -2,7 +2,7 @@
 ENTRY(_start)
 
 /* let it be binary */
-OUTPUT_FORMAT(binary)
+OUTPUT_FORMAT(elf32-i386)
 
 /* the usual sections */
 SECTIONS
