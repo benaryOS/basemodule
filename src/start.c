@@ -1,14 +1,15 @@
 #include <constants.h>
 
+#define putchar(ch) asm volatile("int $0x30" : : "a" (SYSCALL_PUTCHAR), "b" ((ch)))
+
 void _start(void)
 {
-	size_t i,j=0;
+	size_t i;
 	while(1)
 	{
-		for(i=0;i<TEXT_WIDTH*TEXT_HEIGHT;i++)
+		for(i=0;i<10;i++)
 		{
-			TEXT_BUFFER[i*2]='0'+((i+j)%10);
+			putchar('0'+i);
 		}
-		j=(j+1)%10;
 	}
 }

@@ -31,4 +31,9 @@ typedef __builtin_va_list       va_list;
 #define TEXT_WIDTH 80
 #define TEXT_HEIGHT 25
 
+/*
+	syscalls
+*/
+#define SYSCALL_PUTCHAR			0x0001
+
 #endif /** __BENARYOS_CONSTANTS__ **/
