@@ -4,12 +4,13 @@
 
 void _start(void)
 {
-	size_t i;
+	size_t i,j=0;
 	while(1)
 	{
 		for(i=0;i<10;i++)
 		{
-			putchar('0'+i);
+			putchar('0'+((i+j)%10));
 		}
+		j++;
 	}
 }
